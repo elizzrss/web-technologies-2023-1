@@ -14,19 +14,17 @@
     gap: 80px;
 }
 
-.header__logo {
+.logo {
     font-size: 20;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     color: #2D66EE;
     text-decoration: none;
     white-space: nowrap;
-    /* margin: 0px 0px 0px 24px; */
 }
 
-.header__menu {
+.menu {
     display: flex;
-    /* margin: 0px 0px 0px 85.1px; */
 }
 
 .menu {}
@@ -39,9 +37,6 @@
 
 .menu__item {}
 
-.menu__item:not(:first-child) {
-    /* margin: 0px 0px 0px 24px; */
-}
 
 
 .menu__link {
@@ -52,7 +47,7 @@
     color: inherit;
 }
 
-.header__contacts{
+.contacts{
     display: flex;
     align-items: flex-start;
     gap: 32px;
@@ -64,13 +59,13 @@
     gap: 8px;
 }
 
-.item{
+.contacts__item{
     display: flex;
     align-items: flex-start;
     gap: 16px;
 }
 
-.contacts__item {
+.contacts__link {
     font-size: 14px;
     font-family: "SF-Pro-Text", sans-serif;
     font-weight: 500;
@@ -79,18 +74,8 @@
     white-space: nowrap;
 }
 
-.contacts__item-img1 {
-    width: 13.8px;
-    height: 19.8px;
-}
-
 .contacts__email{
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.contacts__item-img2 {
-    width: 19.8px;
-    height: 15.8px;
 }

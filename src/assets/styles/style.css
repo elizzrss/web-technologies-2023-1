@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-._container {
+.container {
     max-width: 1224px;
     margin: 24px auto;
 }
@@ -23,6 +23,7 @@ span {
 }
 ul{
     margin: 0;
+    list-style-type: none;
 }
 
 input{
