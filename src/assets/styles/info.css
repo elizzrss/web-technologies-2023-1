@@ -28,18 +28,27 @@
     line-height: 24px; /* 120% */
     letter-spacing: 0.38px;
 }
+.info__development{
+    align-items: center;
+    display: flex;
+}
 .info__development-list{
     padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .info__development-list li{
     padding: 12px 0;
 }
 .info__development-list > *::after {
     content: "";
+    background-position: right;
     margin-left: 12px;
     background: url(/src/assets/img/chevron_right_small_24.svg) no-repeat;
     height: 24px;
     width: 24px;
     display: inline-block;
+    vertical-align: middle;
 }
 
