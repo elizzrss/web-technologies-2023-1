@@ -57,6 +57,14 @@
     letter-spacing: -0.408px;
 }
 
+#phone-number{
+    background-image: url(/src/assets/img/🇰🇿.png);
+    padding-left: 25px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
 .intro__form-contacts-button {
     padding: 11px 24px;
     background-color: #2D66EE;
