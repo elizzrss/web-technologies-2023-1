@@ -8,12 +8,14 @@
     overflow: clip;
 }
 
-.intro__text {
+.heading {
     display: flex;
     flex-direction: column;
-    padding-top: 160px;
     max-width: 600px;
     gap: 24px;
+}
+.intro__heading{
+    padding-top: 160px;
 }
 
 .intro__form {
