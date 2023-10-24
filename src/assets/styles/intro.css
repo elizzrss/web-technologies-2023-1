@@ -8,12 +8,6 @@
     overflow: clip;
 }
 
-.heading {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    gap: 24px;
-}
 .intro__heading{
     padding-top: 160px;
 }

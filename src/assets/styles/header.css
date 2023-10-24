@@ -28,8 +28,6 @@
     display: flex;
 }
 
-.menu {}
-
 .menu__list {
     display: flex;
     gap: 24px;
@@ -37,8 +35,6 @@
 }
 
 .menu__item {}
-
-
 
 .menu__item-link {
     font-size: 14px;
