@@ -58,12 +58,27 @@ input:focus-visible{
 h1 {
     color: #101828;
     font-family: Inter;
-    font-size: 36px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.326px;
     margin: 0;
     line-height: 144%; /* 51.84px */
+}
+@media (min-width: 768px){     
+
+} 
+@media (min-width: 1440px){     
+    h1{
+        color: #101828;
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.326px;
+        margin: 0;
+        line-height: 144%; /* 51.84px */
+    }
 }
 
 h3{
