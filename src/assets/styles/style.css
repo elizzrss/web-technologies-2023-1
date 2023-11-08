@@ -12,8 +12,18 @@
 }
 
 .container {
-    max-width: 1224px;
-    margin: auto;
+
+}
+@media (min-width: 768px){     
+    .container{
+        padding: 0 40px;   
+    } 
+} 
+@media (min-width: 1440px){     
+    .container{         
+        max-width: 1224px;
+        margin: 0 auto;    
+    } 
 }
 
 .heading {
