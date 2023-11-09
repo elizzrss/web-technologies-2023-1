@@ -4,6 +4,7 @@
 @import "./header.css";
 @import "./intro.css";
 @import "./info.css";
+@import "./industries.css";
 @import "./footer.css";
 
 .wrapper {
@@ -12,11 +13,14 @@
 }
 
 .container {
-
+    max-width: 392px;
+    margin: 0 auto;
 }
 @media (min-width: 768px){     
     .container{
-        padding: 0 40px;   
+        max-width: 688px;
+        margin: 0 auto;
+        padding: 0px;  
     } 
 } 
 @media (min-width: 1440px){     
@@ -29,8 +33,18 @@
 .heading {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    gap: 24px;
+    gap: 32px;
+    max-width: 383px;
+}
+@media (min-width: 1440px){     
+    .heading {
+        max-width: 600px;
+    }
+}
+
+.color{
+    background-color: #F2F4F7;
+    overflow: clip;
 }
 
 body {
@@ -65,19 +79,9 @@ h1 {
     margin: 0;
     line-height: 144%; /* 51.84px */
 }
-@media (min-width: 768px){     
-
-} 
 @media (min-width: 1440px){     
     h1{
-        color: #101828;
-        font-family: Inter;
         font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: 0.326px;
-        margin: 0;
-        line-height: 144%; /* 51.84px */
     }
 }
 
@@ -93,13 +97,17 @@ h3{
 
 h4 {
     color: #101828;
-    font-feature-settings: 'clig'off, 'liga'off;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.38px;
     margin: 0;
+}
+@media (min-width: 1440px){     
+    h4 {
+        font-size: 20px;
+    }
 }
 
 h6 {
@@ -115,9 +123,16 @@ h6 {
 p{
     color: #344054;
     font-family: SF-Pro-Text;
-    font-size: 17px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px; /* 129.412% */
     letter-spacing: -0.408px;
+}
+@media (min-width: 768px){     
+} 
+@media (min-width: 1440px){     
+    p{
+        font-size: 17px;
+    }
 }

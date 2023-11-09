@@ -6,43 +6,38 @@
 }
 @media (min-width: 768px){     
     .header{
-        position: fixed;
         margin-top: 16px;
-        top: 0;
-        z-index: 50;
     }
 } 
 @media (min-width: 1440px){     
     .header{
-        position: fixed;
         margin-top: 24px;
-        top: 0;
-        z-index: 50;
     }
 }
 
 
 .header__container {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     background-color: white;
     height: 90px;
     border-radius: 12px;
-    padding-left: 16px;
+    padding: 35px 17px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
 }
 @media (min-width: 768px){     
-
+    .header__container{
+        padding: 25px 32px;
+        height: 90px;
+        display: inline-flex;
+        justify-content: space-between;
+        min-width: 702px;
+    }
 } 
 @media (min-width: 1440px){     
     .header__container{
-        display: flex;
-        align-items: center;
-        background-color: white;
-        border-radius: 12px;
         padding: 16px 24px;
         height: 56px;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
     }
 }
 
@@ -55,10 +50,12 @@
     text-decoration: none;
     white-space: nowrap;
     line-height: 18px;
-    padding-right: 165px;
+    padding-right: 114px;
 }
 @media (min-width: 768px){     
-
+    .logo{
+        padding-right: 0;
+    }
 } 
 @media (min-width: 1440px){     
     .logo{
@@ -69,7 +66,7 @@
 
 .menu__btn{
     width: 40px;
-    height: 40px;
+    height: 20px;
     background-color: #fff;
     position: relative;
     align-items: center;
@@ -85,10 +82,26 @@
     background-color:#2D66EE;
     position: absolute;
     box-shadow: 0 8px 0 0, 0 16px 0 0;
-    top: 12px;
+    top: 0px;
+    left: 0;
 }
 @media (min-width: 768px){     
-
+    .menu__btn{
+        width: 59px;
+        height: 40px;
+        margin-right: 0px;
+    }
+    .menu__btn:after{
+        content: "";
+        width: 59px;
+        height: 8px;
+        border-radius: 1px;
+        background-color:#2D66EE;
+        position: absolute;
+        box-shadow: 0 16px 0 0, 0 32px 0 0;
+        top: 0px;
+        left: 0px;
+    }
 } 
 @media (min-width: 1440px){     
     .menu__btn, .menu__btn:after {
@@ -130,8 +143,10 @@
     display: none;
 }
 @media (min-width: 768px){     
-
-} 
+    .contacts{
+        display: flex;
+    }
+}
 @media (min-width: 1440px){     
     .contacts{
         display: flex;
@@ -142,9 +157,19 @@
 
 
 .contacts__telephone{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: none;
+}
+@media (min-width: 768px){     
+    .contacts__telephone{
+        display: none;
+    }
+}
+@media (min-width: 1440px){     
+    .contacts__telephone{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }
 
 
@@ -170,3 +195,5 @@
     align-items: center;
     gap: 8px;
 }
+
+

@@ -2,21 +2,35 @@
     position: relative;
     min-height: 900px;
 }
-
-.intro_color{
-    background-color: #F2F4F7;
-    overflow: clip;
+@media (min-width: 768px){     
+    .intro{
+        position: relative;
+        min-height: 770px;
+    }
+} 
+@media (min-width: 1440px){     
+    .intro__heading{
+        padding-top: 160px;
+    }
 }
 
 .intro__heading{
-    padding-top: 160px;
+    padding-top: 138px;
+}
+@media (min-width: 768px){     
+
+} 
+@media (min-width: 1440px){     
+    .intro__heading{
+        padding-top: 160px;
+    }
 }
 
 .intro__form {
     margin-top: 64px;
-    max-width: 724px;
+    max-width: 393px;
     display: inline-flex;
-    padding: 24px;
+    padding: 32px 65px 32px 33px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -25,10 +39,48 @@
     background: #FFF;
     box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
 }
+@media (min-width: 768px){     
+    .intro__form {
+        margin-top: 32px;
+        padding: 32px;
+        max-width: 382px;
+    }
+} 
+@media (min-width: 1440px){     
+    .intro__form {
+        margin-top: 64px;
+        max-width: 724px;
+        display: inline-flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.intro__form-text{
+    max-width: 295px;
+}
 
 .intro__form-contacts {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+@media (min-width: 768px){     
+
+} 
+@media (min-width: 1440px){     
+    .intro__form-contacts {
+        gap: 24px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 .intro__form-contacts-input {
@@ -71,9 +123,17 @@
     font-weight: 600;
     letter-spacing: -0.154px;
     text-align: left;
-    max-width: 132px;
+    max-width: none;
     border-radius: 8px;
     border: none;
+}
+@media (min-width: 768px){     
+
+} 
+@media (min-width: 1440px){     
+    .intro__form-contacts-button {
+        max-width: 132px;
+    }
 }
 
 .intro__images{
