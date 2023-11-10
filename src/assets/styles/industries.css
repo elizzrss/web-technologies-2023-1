@@ -1,14 +1,17 @@
 .industries__block{
     padding-top: 31px;
+    padding-bottom: 32px;
 }
 @media (min-width: 768px){      
     .industries__block{
         padding-top: 45px;
+        padding-bottom: 44px;
     }
 } 
 @media (min-width: 1440px){     
     .industries__block{
         padding-top: 80px;
+        padding-bottom: 120px;
     }
 }
 
@@ -92,7 +95,21 @@
     max-height: 457px;
 }
 
+.list3{
+    display: none;
+}
+@media (min-width: 1440px){    
+    .list3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hide_photos{
+        display: none;
+    }
+}
+
 .industries__block-examples-list-img{
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
 }

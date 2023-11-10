@@ -52,7 +52,7 @@
 @media (min-width: 768px){      
 } 
 @media (min-width: 1440px){     
-    .info__used1{
+    .info__used2{
         max-width: 496px;
     }
 }
@@ -78,7 +78,7 @@
 } 
 @media (min-width: 1440px){     
     .info__development{
-        margin-top: 0;
+        margin-top: -12px;
     }
 }
 

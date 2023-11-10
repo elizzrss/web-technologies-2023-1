@@ -1,6 +1,6 @@
 .intro{
     position: relative;
-    min-height: 900px;
+    min-height: 1267px;
 }
 @media (min-width: 768px){     
     .intro{
@@ -28,7 +28,9 @@
 }
 
 .intro__form {
-    margin-top: 64px;
+    margin-top: 536px;
+    position: relative;
+    z-index: 50;
     max-width: 393px;
     display: inline-flex;
     padding: 32px 65px 32px 33px;
@@ -65,6 +67,14 @@
 
 .intro__form-text{
     max-width: 295px;
+}
+@media (min-width: 768px){     
+
+} 
+@media (min-width: 1440px){     
+    .intro__form-text{
+        max-width: 472px;
+    }
 }
 
 .intro__form-contacts {
@@ -139,13 +149,32 @@
 
 .intro__images{
     position: absolute;
-    top: -591px;
-    left: 720px;
+    top: 334px;
+    left: 117px;
     display: flex;
     gap: 20px;
     width: 624px;
     flex-wrap: wrap;
     transform: rotate(-12deg);
+}
+@media (min-width: 768px){    
+    .intro__images {
+        top: -69px;
+        left: 456px;
+    }
+
+} 
+@media (min-width: 1440px){     
+    .intro__images{
+        position: absolute;
+        top: -591px;
+        left: 720px;
+        display: flex;
+        gap: 20px;
+        width: 624px;
+        flex-wrap: wrap;
+        transform: rotate(-12deg);
+    }
 }
 
 .intro__images > div{
@@ -155,12 +184,16 @@
 }
 
 .intro__images > div > img{
-    width: 292.226px;
-    height: 632.767px;
+    width: 137.93px;
+    height: 271.172px;
     border-radius: 24px;
 }
 
-@media (min-width: 768px){     
+@media (min-width: 768px){    
+    .intro__images > div > img {
+        width: 137.93px;
+        height: 298.663px;
+    } 
 
 } 
 @media (min-width: 1440px){     
