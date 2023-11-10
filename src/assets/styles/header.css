@@ -89,7 +89,6 @@
     .menu__btn{
         width: 59px;
         height: 40px;
-        margin-right: 0px;
     }
     .menu__btn:after{
         content: "";

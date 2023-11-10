@@ -5,13 +5,14 @@
 @media (min-width: 768px){     
     .intro{
         position: relative;
-        min-height: 770px;
+        min-height: 762px;
     }
 } 
-@media (min-width: 1440px){     
-    .intro__heading{
-        padding-top: 160px;
-    }
+@media (min-width: 1440px){    
+    .intro{
+        position: relative;
+        min-height: 900px;
+    } 
 }
 
 .intro__heading{
@@ -147,9 +148,34 @@
     transform: rotate(-12deg);
 }
 
-.intro__images > *{
+.intro__images > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.intro__images > div > img{
     width: 292.226px;
     height: 632.767px;
     border-radius: 24px;
 }
+
+@media (min-width: 768px){     
+
+} 
+@media (min-width: 1440px){     
+    .intro__images > div{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .intro__images > div > img{
+        width: 292.226px;
+        height: 632.767px;
+        border-radius: 24px;
+    }
+}
+
+
 
