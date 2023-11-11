@@ -177,6 +177,35 @@
     }
 }
 
+
+.intro__images-1 > img, .intro__images-2 > img {
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.intro__images-1 > img {
+    animation-name: moveUp;
+}
+.intro__images-2 > img {
+    animation-name: moveDown;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(70%);
+    }
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-70%);
+    }
+}
+
 .intro__images > div{
     display: flex;
     flex-direction: column;
