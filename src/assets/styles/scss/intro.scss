@@ -1,0 +1,241 @@
+$color_1: #667085;
+$color_2: #101828;
+$color_3: #FFF;
+$font-family_1: SF-Pro-Text;
+$background-color_1: #2D66EE;
+
+.intro {
+	position: relative;
+	min-height: 1267px;
+}
+.intro__heading {
+	padding-top: 138px;
+}
+.intro__form {
+	margin-top: 536px;
+	position: relative;
+	z-index: 50;
+	max-width: 393px;
+	display: inline-flex;
+	padding: 32px 65px 32px 33px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 32px;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+}
+.intro__form-text {
+	max-width: 295px;
+}
+.intro__form-contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+}
+.intro__form-contacts-input {
+	max-width: 224px;
+	border-bottom: 1px #D0D5DD solid;
+	color: $color_1;
+	font-family: $font-family_1;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: -0.078px;
+	input[type="text"] {
+		color: $color_2;
+		font-family: $font-family_1;
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: -0.408px;
+	}
+}
+#phone-number {
+	background-image: url(/src/assets/img/🇰🇿.png);
+	padding-left: 25px;
+	background-size: 16px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+.intro__form-contacts-button {
+	padding: 11px 24px;
+	background-color: $background-color_1;
+	color: $color_3;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: -0.154px;
+	text-align: left;
+	max-width: none;
+	border-radius: 8px;
+	border: none;
+}
+.intro__images {
+	position: absolute;
+	top: 334px;
+	left: 117px;
+	display: flex;
+	gap: 20px;
+	width: 624px;
+	flex-wrap: wrap;
+	transform: rotate(-12deg);
+	>div {
+		>img {
+			width: 137.93px;
+			height: 271.172px;
+			border-radius: 24px;
+		}
+	}
+}
+.intro__images {
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+	.intro {
+		position: relative;
+		min-height: 762px;
+	}
+	.intro__form {
+		margin-top: 32px;
+		padding: 32px;
+		max-width: 382px;
+	}
+	.intro__images {
+		top: -69px;
+		left: 456px;
+		>div {
+			>img {
+				width: 137.93px;
+				height: 298.663px;
+			}
+		}
+	}
+	.intro__images-1 {
+		>img {
+			animation-duration: 15s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-name: moveUp;
+		}
+	}
+	.intro__images-2 {
+		>img {
+			animation-duration: 15s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-name: moveDown;
+		}
+	}
+	@keyframes moveDown {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(50%);
+        }
+    }
+    @keyframes moveUp {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+}
+@media (min-width: 1440px) {
+	.intro {
+		position: relative;
+		min-height: 900px;
+	}
+	.intro__heading {
+		padding-top: 160px;
+	}
+	.intro__form {
+		margin-top: 64px;
+		max-width: 724px;
+		display: inline-flex;
+		padding: 24px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 32px;
+		border-radius: 12px;
+		background: #FFF;
+		box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+	}
+	.intro__form-text {
+		max-width: 472px;
+	}
+	.intro__form-contacts {
+		gap: 24px;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.intro__form-contacts-button {
+		max-width: 132px;
+	}
+	.intro__images {
+		position: absolute;
+		top: -591px;
+		left: 720px;
+		display: flex;
+		gap: 20px;
+		width: 624px;
+		flex-wrap: wrap;
+		transform: rotate(-12deg);
+		>div {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			>img {
+				width: 292.226px;
+				height: 632.767px;
+				border-radius: 24px;
+			}
+		}
+	}
+	.intro__images-1 {
+		>img {
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-name: moveUp;
+		}
+	}
+	.intro__images-2 {
+		>img {
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-name: moveDown;
+		}
+	}
+	@keyframes moveDown {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(70%);
+        }
+    }
+    @keyframes moveUp {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-70%);
+        }
+    }
+}
