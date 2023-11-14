@@ -1,0 +1,41 @@
+.book__block{
+    padding-top: 49px;
+    padding-bottom: 56px;
+    h1{
+        color: #FCFCFD;
+        max-width: 333px;
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+}
+
+.book-photo{
+    width: 160.222px;
+    height: 242.314px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.book__form{
+    padding: 32px;
+    max-width: 335px;
+    margin: 0 auto;
+
+    &-contacts{
+        gap: 32px;
+
+        &-input{
+            width: 271px;
+            padding: 16px 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-button{
+            padding: 11px 24px;
+            margin-top: 16px;
+        }
+    }
+}

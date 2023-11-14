@@ -1,8 +1,6 @@
-$color_1: #667085;
 $color_2: #101828;
 $color_3: #FFF;
 $font-family_1: SF-Pro-Text;
-$background-color_1: #2D66EE;
 
 .intro {
 	position: relative;
@@ -11,70 +9,41 @@ $background-color_1: #2D66EE;
 .intro__heading {
 	padding-top: 138px;
 }
+@media (min-width: 768px) {
+    .intro__heading {
+		h6{
+			max-width: 383px;
+		}
+	}
+}
+@media (min-width: 1440px) {
+	.intro__heading {
+		h6{
+			max-width: 600px;
+		}
+	}
+}
+
 .intro__form {
 	margin-top: 536px;
 	position: relative;
 	z-index: 50;
 	max-width: 393px;
-	display: inline-flex;
 	padding: 32px 65px 32px 33px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
 	gap: 32px;
-	border-radius: 12px;
-	background: #FFF;
-	box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
 }
 .intro__form-text {
 	max-width: 295px;
 }
 .intro__form-contacts {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
 	gap: 32px;
 }
 .intro__form-contacts-input {
 	max-width: 224px;
-	border-bottom: 1px #D0D5DD solid;
-	color: $color_1;
-	font-family: $font-family_1;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 16px;
-	letter-spacing: -0.078px;
-	input[type="text"] {
-		color: $color_2;
-		font-family: $font-family_1;
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 22px;
-		letter-spacing: -0.408px;
-	}
-}
-#phone-number {
-	background-image: url(/src/assets/img/🇰🇿.png);
-	padding-left: 25px;
-	background-size: 16px;
-	background-repeat: no-repeat;
-	background-position: left;
 }
 .intro__form-contacts-button {
 	padding: 11px 24px;
-	background-color: $background-color_1;
-	color: $color_3;
-	font-family: $font-family_1;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 600;
-	letter-spacing: -0.154px;
-	text-align: left;
 	max-width: none;
-	border-radius: 8px;
-	border: none;
 }
 .intro__images {
 	position: absolute;

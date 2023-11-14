@@ -1,0 +1,40 @@
+.development {
+  margin-top: 32px;
+}
+.development h1 {
+  max-width: 309px;
+  margin-bottom: 51px;
+}
+.development__card {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  margin-bottom: 20px;
+}
+.development__card p {
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.24px;
+  margin: 0;
+  margin-top: 16px;
+}
+.development__card-item {
+  padding: 24px 0 46px 24px;
+}
+.development__card-item-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.item24 {
+  padding: 24px 0 24px 24px;
+}
+
+.item19 {
+  padding: 24px 0 19px 24px;
+}
+
+.item29 {
+  padding: 24px 0 29px 24px;
+}/*# sourceMappingURL=development.css.map */

@@ -1,0 +1,32 @@
+.creating__block {
+  padding-top: 34px;
+  padding-bottom: 55px;
+}
+
+.creating__heading h1, .creating__heading h6 {
+  color: #fff;
+}
+.creating__heading h6 {
+  font-size: 14px;
+  max-width: 344px;
+  margin-bottom: 20px;
+}
+
+.creating__form {
+  margin-top: 20px;
+  max-width: 393px;
+  padding: 36px 18px 36px 17px;
+}
+.creating__form-contacts {
+  gap: 40px;
+}
+.creating__form-contacts-input {
+  width: 359px;
+  display: flex;
+  flex-direction: column;
+}
+.creating__form-contacts-button {
+  padding: 11px 62px 11px 63px;
+  margin: 0 auto;
+  margin-top: -16px;
+}/*# sourceMappingURL=creating.css.map */

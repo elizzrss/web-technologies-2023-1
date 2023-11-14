@@ -1,0 +1,22 @@
+.faq {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.faq__example {
+  display: flex;
+  flex-direction: column;
+}
+.faq__example img {
+  width: 60px;
+  height: 60px;
+}
+.faq__example h3 {
+  max-width: 299px;
+  margin: 32px 0;
+}
+.faq__example-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #D0D5DD solid;
+}/*# sourceMappingURL=faq.css.map */
