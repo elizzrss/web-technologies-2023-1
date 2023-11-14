@@ -11,6 +11,9 @@
   .intro__heading h6 {
     max-width: 383px;
   }
+  .intro__heading h1 {
+    max-width: 383px;
+  }
 }
 @media (min-width: 1440px) {
   .intro__heading h6 {

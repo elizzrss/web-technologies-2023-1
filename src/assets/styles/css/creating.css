@@ -3,6 +3,15 @@
   padding-bottom: 55px;
 }
 
+@media (min-width: 768px) {
+  .creating__block {
+    padding-top: 22px;
+    padding-bottom: 32px;
+  }
+  .creating-photo {
+    width: 704px;
+  }
+}
 .creating__heading h1, .creating__heading h6 {
   color: #fff;
 }
@@ -12,6 +21,11 @@
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .creating__heading h1 {
+    max-width: 195px;
+  }
+}
 .creating__form {
   margin-top: 20px;
   max-width: 393px;
@@ -29,4 +43,21 @@
   padding: 11px 62px 11px 63px;
   margin: 0 auto;
   margin-top: -16px;
+}
+
+@media (min-width: 768px) {
+  .creating__form {
+    margin-top: -60px;
+    position: relative;
+    padding: 24px;
+    max-width: 600px;
+  }
+  .creating__form-contacts {
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .creating__form-contacts-input {
+    width: 264px;
+  }
 }/*# sourceMappingURL=creating.css.map */

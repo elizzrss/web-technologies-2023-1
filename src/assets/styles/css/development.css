@@ -27,6 +27,24 @@
   gap: 24px;
 }
 
+@media (min-width: 768px) {
+  .development {
+    margin-top: 32px;
+  }
+  .development h1 {
+    max-width: 600px;
+    margin-bottom: 44px;
+  }
+  .development__card {
+    margin-bottom: 32px;
+  }
+  .development__card-number {
+    height: 172px;
+  }
+  .development__card-item {
+    padding: 24px 0 24px 24px;
+  }
+}
 .item24 {
   padding: 24px 0 24px 24px;
 }

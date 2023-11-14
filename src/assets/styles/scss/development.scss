@@ -29,6 +29,29 @@
         }
     }
 }
+@media (min-width: 768px) {
+    .development{
+        margin-top: 32px;
+        h1{
+            max-width: 600px;
+            margin-bottom: 44px;
+        }
+
+        &__card{
+            margin-bottom: 32px;
+            &-number{
+                height: 172px;
+            }
+
+            &-item{
+                padding: 24px 0 24px 24px;
+            }
+        }
+    }
+}
+@media (min-width: 1440px) {
+
+}
 
 .item24{
     padding: 24px 0 24px 24px;
