@@ -76,6 +76,16 @@
 		}
 	}
 }
+@media (min-width: 768px) {
+	.form {
+		&-contacts{
+			flex-direction: row;
+            flex-wrap: wrap;
+		}
+	}
+}
+
+
 #phone-number {
 	background-image: url(/src/assets/img/🇰🇿.png);
 	padding-left: 25px;

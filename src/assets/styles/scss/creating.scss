@@ -67,11 +67,15 @@
 
         &-contacts{
             gap: 24px;
-            flex-direction: row;
-            flex-wrap: wrap;
 
             &-input{
                 width: 264px;
+            }
+
+            &-button{
+                margin-top: 36px;
+                margin-left: 374px;
+                padding: 11px 24px;
             }
         }
     }

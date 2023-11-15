@@ -54,10 +54,13 @@
   }
   .creating__form-contacts {
     gap: 24px;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
   .creating__form-contacts-input {
     width: 264px;
+  }
+  .creating__form-contacts-button {
+    margin-top: 36px;
+    margin-left: 374px;
+    padding: 11px 24px;
   }
 }/*# sourceMappingURL=creating.css.map */

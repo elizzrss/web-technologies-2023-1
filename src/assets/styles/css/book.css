@@ -10,6 +10,21 @@
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .book__block {
+    padding: 76px 0px 84px 41px;
+  }
+  .book__block h1 {
+    max-width: 455px;
+    margin: 0;
+    margin-bottom: 53px;
+  }
+  .book__block-768 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 51px;
+  }
+}
 .book-photo {
   width: 160.222px;
   height: 242.314px;
@@ -18,21 +33,43 @@
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .book-photo {
+    width: 283px;
+    height: 428px;
+    margin-bottom: 0;
+  }
+}
 .book__form {
   padding: 32px;
   max-width: 335px;
   margin: 0 auto;
+  padding: 48px 32px 37px 32px;
 }
 .book__form-contacts {
-  gap: 32px;
+  gap: 48px;
 }
 .book__form-contacts-input {
   width: 271px;
-  padding: 16px 0px;
   display: flex;
   flex-direction: column;
 }
 .book__form-contacts-button {
   padding: 11px 24px;
   margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .book__form {
+    margin: 0;
+  }
+  .book__form-contacts-input {
+    width: 271px;
+    display: flex;
+    flex-direction: column;
+  }
+  .book__form-contacts-button {
+    padding: 11px 24px;
+    margin-top: 16px;
+  }
 }/*# sourceMappingURL=book.css.map */

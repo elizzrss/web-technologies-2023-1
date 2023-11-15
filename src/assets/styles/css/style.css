@@ -990,11 +990,14 @@ html {
   }
   .creating__form-contacts {
     gap: 24px;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
   .creating__form-contacts-input {
     width: 264px;
+  }
+  .creating__form-contacts-button {
+    margin-top: 36px;
+    margin-left: 374px;
+    padding: 11px 24px;
   }
 }
 .development {
@@ -1064,12 +1067,18 @@ html {
   max-width: 376px;
 }
 
+@media (min-width: 768px) {
+  .team__heading {
+    margin-bottom: 40px;
+  }
+}
 .team__block {
   padding-top: 28px;
   padding-bottom: 45px;
 }
 .team__block-statistics {
   justify-content: space-between;
+  margin-top: 32px;
 }
 .team__block-statistics p {
   color: #667085;
@@ -1080,11 +1089,33 @@ html {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .team__block {
+    padding-top: 38px;
+    padding-bottom: 52px;
+  }
+  .team__block-statistics {
+    margin-top: 52px;
+  }
+  .team__block-statistics h1 {
+    font-size: 48px;
+  }
+  .team__block-statistics p {
+    margin-top: 8px;
+    margin-bottom: 40px;
+  }
+}
 #team-photo {
   width: 392px;
   height: 263px;
 }
 
+@media (min-width: 768px) {
+  #team-photo {
+    width: 702px;
+    height: 392px;
+  }
+}
 .book__block {
   padding-top: 49px;
   padding-bottom: 56px;
@@ -1097,6 +1128,21 @@ html {
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .book__block {
+    padding: 76px 0px 84px 41px;
+  }
+  .book__block h1 {
+    max-width: 455px;
+    margin: 0;
+    margin-bottom: 53px;
+  }
+  .book__block-768 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 51px;
+  }
+}
 .book-photo {
   width: 160.222px;
   height: 242.314px;
@@ -1105,17 +1151,24 @@ html {
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .book-photo {
+    width: 283px;
+    height: 428px;
+    margin-bottom: 0;
+  }
+}
 .book__form {
   padding: 32px;
   max-width: 335px;
   margin: 0 auto;
+  padding: 48px 32px 37px 32px;
 }
 .book__form-contacts {
-  gap: 32px;
+  gap: 48px;
 }
 .book__form-contacts-input {
   width: 271px;
-  padding: 16px 0px;
   display: flex;
   flex-direction: column;
 }
@@ -1124,11 +1177,31 @@ html {
   margin-top: 16px;
 }
 
+@media (min-width: 768px) {
+  .book__form {
+    margin: 0;
+  }
+  .book__form-contacts-input {
+    width: 271px;
+    display: flex;
+    flex-direction: column;
+  }
+  .book__form-contacts-button {
+    padding: 11px 24px;
+    margin-top: 16px;
+  }
+}
 .faq {
   margin-top: 32px;
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .faq {
+    margin-top: 22px;
+    margin-bottom: 32px;
+  }
+}
 .faq__example {
   display: flex;
   flex-direction: column;
@@ -1147,6 +1220,18 @@ html {
   border-bottom: 1px #D0D5DD solid;
 }
 
+@media (min-width: 768px) {
+  .faq__example {
+    padding-left: 49px;
+    padding-right: 37px;
+  }
+  .faq__example h3 {
+    max-width: 524px;
+  }
+  .faq__example-item {
+    justify-content: space-between;
+  }
+}
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -1212,6 +1297,12 @@ html {
   letter-spacing: -0.408px;
 }
 
+@media (min-width: 768px) {
+  .form-contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 #phone-number {
   background-image: url(/src/assets/img/🇰🇿.png);
   padding-left: 25px;

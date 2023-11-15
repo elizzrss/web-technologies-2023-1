@@ -3,6 +3,12 @@
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .faq {
+    margin-top: 22px;
+    margin-bottom: 32px;
+  }
+}
 .faq__example {
   display: flex;
   flex-direction: column;
@@ -19,4 +25,17 @@
   display: flex;
   align-items: center;
   border-bottom: 1px #D0D5DD solid;
+}
+
+@media (min-width: 768px) {
+  .faq__example {
+    padding-left: 49px;
+    padding-right: 37px;
+  }
+  .faq__example h3 {
+    max-width: 524px;
+  }
+  .faq__example-item {
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=faq.css.map */
