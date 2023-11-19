@@ -4,11 +4,25 @@
 .team__heading h6 {
   font-size: 14px;
   max-width: 376px;
+  margin-top: -12px;
 }
 
 @media (min-width: 768px) {
   .team__heading {
     margin-bottom: 40px;
+  }
+  .team__heading h6 {
+    margin-top: 0;
+    max-width: 414.839px;
+  }
+}
+@media (min-width: 1440px) {
+  .team__heading {
+    margin-bottom: 0px;
+  }
+  .team__heading h6 {
+    font-size: 15px;
+    max-width: 600px;
   }
 }
 .team__block {
@@ -35,6 +49,7 @@
   }
   .team__block-statistics {
     margin-top: 52px;
+    justify-content: space-around;
   }
   .team__block-statistics h1 {
     font-size: 48px;
@@ -42,6 +57,28 @@
   .team__block-statistics p {
     margin-top: 8px;
     margin-bottom: 40px;
+  }
+  .team__block-text {
+    font-size: 14px;
+    margin-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .team__block {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .team__block-statistics {
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  .team__block-statistics p {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .team__block-text {
+    margin-left: 0;
+    font-size: 15px;
   }
 }
 #team-photo {
@@ -53,5 +90,19 @@
   #team-photo {
     width: 702px;
     height: 392px;
+  }
+}
+@media (min-width: 1440px) {
+  #team-photo {
+    width: 603px;
+    height: 392px;
+    margin-top: -125px;
+  }
+  .team-1440 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 21px;
   }
 }/*# sourceMappingURL=team.css.map */

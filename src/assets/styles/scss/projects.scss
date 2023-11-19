@@ -7,13 +7,16 @@
     }
 }
 @media (min-width: 1440px) {
-
+    .projects__block{
+        padding-bottom: 63px;
+    }
 }
 
 .projects__heading{
     h6{
         max-width: 353px;
         font-size: 14px;
+		margin-top: -8px;
     }
 }
 @media (min-width: 768px) {
@@ -64,6 +67,10 @@
 @media (min-width: 1440px) {
     .projects__list-items{
         max-width: 801px;
+        margin-top: 70px;
+        a{
+            font-size: 17px;
+        }
     }
     
 }
@@ -90,7 +97,8 @@
 }
 @media (min-width: 1440px) {
     .projects__button{
-        display: flex;
+        margin-top: -30px;
+        margin-right: 50px;
     }
 }
 
@@ -130,14 +138,19 @@
             p{
                 margin-top: 0;
                 margin-bottom: 32px;
+                color: #667085;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px; /* 133.333% */
+                letter-spacing: -0.078px;
             }
         } 
     }
     &-save{
         display: flex;
         align-items: center;
-        gap: 16px;
-        margin-bottom: 32px;
+        gap: 23px;
     }
 }
 @media (min-width: 768px) {
@@ -147,7 +160,8 @@
         }
         &-phone2{
             display: flex;
-            max-width: 360.652px;
+            width: 368.652px;
+            height: 225px;
         }
 
         p{
@@ -159,19 +173,34 @@
             flex-direction: row-reverse;
             align-items: center;
         }
+
+        &-save{
+            gap: 16px;
+        }
     }
 }
 @media (min-width: 1440px) {
-    .projects__button{
-        display: flex;
+    .projects__examples{
+        &-block{
+            justify-content: space-between;
+        }
+
+        &-phone2{
+            display: flex;
+            width: 600px;
+            height: 326px;
+            margin-top: -155px;
+        }
     }
 }
 
 .examples__heading{
+    margin-top: 32px;
     h6{
         max-width: 393px;
         font-weight: 400;
         font-size: 14px;
+        margin-top: -12px;
     }
 }
 @media (min-width: 768px) {
@@ -179,6 +208,7 @@
         margin-top: 52px;
         h6{
             max-width: 459px;
+            margin-top: 0;
         }
     }
 }
@@ -200,6 +230,7 @@
     align-items: center;
     flex-shrink: 0;
     margin: 0 auto;
+    margin-top: 32px;
 }
 @media (min-width: 768px) {
     .projects__button2{

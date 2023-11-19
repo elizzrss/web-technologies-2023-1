@@ -8,20 +8,22 @@ $font-family_1: SF-Pro-Text;
 }
 .intro__heading {
 	padding-top: 138px;
+
+	h6{
+		margin-top: -8px;
+	}
 }
 @media (min-width: 768px) {
     .intro__heading {
-		h6{
-			max-width: 383px;
-		}
-		h1{
+		padding-bottom: 32px;
+		h6, h1{
 			max-width: 383px;
 		}
 	}
 }
 @media (min-width: 1440px) {
 	.intro__heading {
-		h6{
+		h6, h1{
 			max-width: 600px;
 		}
 	}
@@ -33,7 +35,7 @@ $font-family_1: SF-Pro-Text;
 	z-index: 50;
 	max-width: 393px;
 	padding: 32px 65px 32px 33px;
-	gap: 32px;
+	gap: 20px;
 }
 .intro__form-text {
 	max-width: 295px;
@@ -77,9 +79,10 @@ $font-family_1: SF-Pro-Text;
 	.intro {
 		position: relative;
 		min-height: 762px;
+		padding-bottom: 32px;
 	}
 	.intro__form {
-		margin-top: 32px;
+		margin-top: 0;
 		padding: 32px;
 		max-width: 382px;
 	}
@@ -135,8 +138,8 @@ $font-family_1: SF-Pro-Text;
 		padding-top: 160px;
 	}
 	.intro__form {
-		margin-top: 64px;
-		max-width: 724px;
+		margin-top: 32px;
+		max-width: 676px;
 		display: inline-flex;
 		padding: 24px;
 		flex-direction: column;
@@ -154,6 +157,7 @@ $font-family_1: SF-Pro-Text;
 		gap: 24px;
 		flex-direction: row;
 		align-items: flex-start;
+		margin-top: 0;
 	}
 	.intro__form-contacts-button {
 		max-width: 132px;

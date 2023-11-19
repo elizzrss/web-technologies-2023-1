@@ -9,7 +9,10 @@
     }
 }
 @media (min-width: 1440px) {
-
+    .faq{
+        margin-top: 80px;
+        margin-bottom: 54px;
+    }
 }
 
 .faq__example{
@@ -48,5 +51,17 @@
     }
 }
 @media (min-width: 1440px) {
+    .faq__example{
+        padding: 0;
+        justify-content: space-between;
+        flex-direction: row;
+    
+        h3{
+            max-width: 524px;
+        }
 
+        &-item{
+            justify-content: space-between;
+        }
+    }
 }

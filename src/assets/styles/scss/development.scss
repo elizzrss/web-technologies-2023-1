@@ -39,6 +39,7 @@
 
         &__card{
             margin-bottom: 32px;
+            padding-right: 24px;
             &-number{
                 height: 172px;
             }
@@ -50,7 +51,26 @@
     }
 }
 @media (min-width: 1440px) {
+    .development{
+        margin-top: 80px;
+        margin-bottom: 48px;
+        &__card{
+            max-width: 392px;
+            padding-right: 0;
+            p{
+                font-size: 15px;
+            }
 
+            &-number{
+                margin-left: -104px;
+            }
+        }
+    }
+
+    .card{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .item24{

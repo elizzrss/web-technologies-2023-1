@@ -62,12 +62,16 @@ $font-family_1: SF-Pro-Display;
 	}
 	.info__development {
 		margin-top: 124px;
+
+		&-list{
+			margin-top: 84px;
+		}
 	}
 }
 @media (min-width: 1440px) {
 	.info {
 		margin-top: 80px;
-		margin-bottom: 80px;
+		margin-bottom: 60px;
 	}
 	.info__container {
 		display: flex;
@@ -84,5 +88,9 @@ $font-family_1: SF-Pro-Display;
 	}
 	.info__development {
 		margin-top: -12px;
+
+		&-list{
+			margin-top: -45px;
+		}
 	}
 }

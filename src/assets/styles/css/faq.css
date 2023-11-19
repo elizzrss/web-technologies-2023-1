@@ -9,6 +9,12 @@
     margin-bottom: 32px;
   }
 }
+@media (min-width: 1440px) {
+  .faq {
+    margin-top: 80px;
+    margin-bottom: 54px;
+  }
+}
 .faq__example {
   display: flex;
   flex-direction: column;
@@ -31,6 +37,19 @@
   .faq__example {
     padding-left: 49px;
     padding-right: 37px;
+  }
+  .faq__example h3 {
+    max-width: 524px;
+  }
+  .faq__example-item {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1440px) {
+  .faq__example {
+    padding: 0;
+    justify-content: space-between;
+    flex-direction: row;
   }
   .faq__example h3 {
     max-width: 524px;

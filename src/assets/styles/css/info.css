@@ -65,11 +65,14 @@
   .info__development {
     margin-top: 124px;
   }
+  .info__development-list {
+    margin-top: 84px;
+  }
 }
 @media (min-width: 1440px) {
   .info {
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   .info__container {
     display: flex;
@@ -86,5 +89,8 @@
   }
   .info__development {
     margin-top: -12px;
+  }
+  .info__development-list {
+    margin-top: -45px;
   }
 }/*# sourceMappingURL=info.css.map */
