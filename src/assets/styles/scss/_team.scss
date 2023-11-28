@@ -2,7 +2,6 @@
     margin-bottom: 20px;
     h6{
         font-size: 14px;
-        max-width: 376px;
         margin-top: -12px;
     }
 }
@@ -11,7 +10,6 @@
         margin-bottom: 40px;
         h6{
             margin-top: 0;
-            max-width: 414.839px;
         }
     }
 }
@@ -48,7 +46,7 @@
 
         &-statistics{
             margin-top: 52px;
-            justify-content: space-around;
+            justify-content: space-between;
 
             h1{
                 font-size: 48px;
@@ -62,7 +60,6 @@
 
         &-text{
             font-size: 14px;
-            margin-left: 50px;
         }
     }
 }
@@ -88,19 +85,23 @@
 }
 
 #team-photo{
-    width: 392px;
-    height: 263px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
 @media (min-width: 768px) {
     #team-photo{
-        width: 702px;
-        height: 392px;
+        max-width: 857px;
+    }
+
+    .team-1440{
+
     }
 }
 @media (min-width: 1440px) {
     #team-photo{
-        width: 603px;
-        height: 392px;
+        width: 554px;
+        height: 374px;
         margin-top: -125px;
     }
 

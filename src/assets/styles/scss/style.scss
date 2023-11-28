@@ -18,7 +18,8 @@
 	overflow: hidden;
 }
 .container {
-	max-width: 392px;
+	max-width: 689px;
+	padding: 0 16px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -51,7 +52,8 @@
 
 	&-contacts{
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 		align-items: flex-start;
 		margin-top: 12px;
 
@@ -180,16 +182,16 @@ p {
 }
 @media (min-width: 768px) {
 	.container {
-		max-width: 688px;
+		max-width: 1224px;
 		margin: 0 auto;
-		padding: 0px;
+		padding: 0 40px;
 	}
 }
 @media (min-width: 1440px) {
-	.container {
-		max-width: 1224px;
-		margin: 0 auto;
-	}
+	// .container {
+	// 	max-width: 1224px;
+	// 	margin: 0 auto;
+	// }
 	.heading {
 		max-width: 600px;
 	}

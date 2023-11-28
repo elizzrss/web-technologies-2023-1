@@ -5,19 +5,13 @@ $font-family_1: SF-Pro-Text;
 	padding-top: 31px;
 	padding-bottom: 32px;
 }
-.industries__block-text {
-	max-width: 380px;
-}
 .industries__block-examples {
-	max-width: 369px;
-	max-height: 457px;
 	margin-top: 27px;
 }
 .industries__block-examples-list {
 	padding: 0;
 	display: flex;
-	gap: 32px;
-	min-width: 369px;
+	justify-content: space-between;
 	li {
 		color: $color_1;
 		font-family: $font-family_1;
@@ -55,7 +49,6 @@ $font-family_1: SF-Pro-Text;
 	}
 	.industries__block-examples {
 		margin-top: 48px;
-		max-width: 601px;
 	}
 	.industries__block-examples-list {
 		gap: 138px;
@@ -63,6 +56,10 @@ $font-family_1: SF-Pro-Text;
 		li {
 			font-size: 17px;
 		}
+	}
+
+	.list2{
+		margin-right: 111px;
 	}
 }
 @media (min-width: 1440px) {
@@ -75,12 +72,14 @@ $font-family_1: SF-Pro-Text;
 	}
 	.industries__block-examples {
 		margin-top: 28px;
-		max-width: none;
 	}
 	.industries__block-examples-list {
 		display: inline-flex;
 		align-items: flex-start;
 		gap: 210px;
+	}
+	.list2{
+		margin-right: 0;
 	}
 	.list3 {
 		display: flex;

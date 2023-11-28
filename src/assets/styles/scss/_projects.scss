@@ -14,18 +14,11 @@
 
 .projects__heading{
     h6{
-        max-width: 353px;
         font-size: 14px;
 		margin-top: -8px;
     }
 }
-@media (min-width: 768px) {
-    .projects__heading{
-        h6{
-            max-width: 471px;
-        }
-    }
-}
+
 @media (min-width: 1440px) {
     .projects__heading{
         h6{
@@ -104,9 +97,8 @@
 
 .projects__examples{
     &-phone{
-        max-width: 393px;
-        max-height: 225px;
-        flex-shrink: 0;
+        display: block;
+        max-width: 100%;
         margin-top: 32px;
     }
     &-phone2{
@@ -155,13 +147,13 @@
 }
 @media (min-width: 768px) {
     .projects__examples{
+        min-width: 733px;
         &-phone{
             display: none;
         }
         &-phone2{
-            display: flex;
-            width: 368.652px;
-            height: 225px;
+            display: block;
+            max-width: 100%;
         }
 
         p{
@@ -172,6 +164,7 @@
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
+            justify-content: space-between;
         }
 
         &-save{
@@ -197,7 +190,6 @@
 .examples__heading{
     margin-top: 32px;
     h6{
-        max-width: 393px;
         font-weight: 400;
         font-size: 14px;
         margin-top: -12px;
@@ -207,7 +199,6 @@
     .examples__heading{
         margin-top: 52px;
         h6{
-            max-width: 459px;
             margin-top: 0;
         }
     }

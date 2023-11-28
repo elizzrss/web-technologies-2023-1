@@ -11,14 +11,18 @@ $background-color_3: #2D66EE;
 	margin-top: 20px;
 	top: 0;
 	z-index: 100;
+	width: 100%;
 }
 .header__container {
 	display: flex;
 	align-items: center;
 	background-color: $background-color_1;
+	justify-content: space-between;
 	height: 90px;
 	border-radius: 12px;
 	padding: 35px 17px;
+	max-width: 688px;
+	margin: 0 auto;
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
 }
 .logo {
@@ -29,7 +33,7 @@ $background-color_3: #2D66EE;
 	text-decoration: none;
 	white-space: nowrap;
 	line-height: 18px;
-	padding-right: 114px;
+	// padding-right: 114px;
 }
 .menu__btn {
 	width: 40px;
@@ -38,7 +42,7 @@ $background-color_3: #2D66EE;
 	position: relative;
 	align-items: center;
 	border: none;
-	margin-right: 91px;
+	// margin-right: 91px;
 	color: $color_1;
 	&:after {
 		content: "";
@@ -95,13 +99,17 @@ $background-color_3: #2D66EE;
 @media (min-width: 768px) {
 	.header {
 		margin-top: 16px;
+		padding: 0 40px;
 	}
 	.header__container {
 		padding: 25px 32px;
 		height: 90px;
-		display: inline-flex;
+		display: flex;
 		justify-content: space-between;
-		min-width: 702px;
+
+		max-width: 1144px;
+		margin: 0 auto;
+		// min-width: 702px;
 	}
 	.logo {
 		padding-right: 0;
