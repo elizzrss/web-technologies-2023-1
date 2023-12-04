@@ -11,7 +11,7 @@ const students = [
 function pickPropArray(array, key) {
     let result = []
     array.forEach(item => {
-       if (item[key]) result.push(item[key]) 
+        if (item[key]) result.push(item[key]) 
     }); 
     return result
 }
@@ -67,17 +67,3 @@ function func(nums, target){
 
 const result3 = func(nums, target)
 console.log(result3);
-
-// 5 ЗАДАНИЕ
-const strs = ["цветок","поток","хлопок"]
-
-function searchPrefix(strs){
-    let prefix = strs[0]
-    for (let i=1; i < strs.length; i++){
-        // while (strs[i].indexOf(prefix) != 0){}
-            // console.log(strs[i]);
-    }
-}
-
-const result4 = searchPrefix(strs)
-console.log(result4);
