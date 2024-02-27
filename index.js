@@ -1,83 +1,80 @@
-// 1 ЗАДАНИЕ
-const students = [
-    { name: 'Лиза', age: 19 },
-    { name: 'Луиз', age: 20 },
-    { name: 'Иван', age: 12 },
-    { name: 'Александр', age: 32 },
-    { name: 'Константин', age: 1 },
-    { age: 19 },
-]
-
-function pickPropArray(array, key) {
-    let result = []
-    array.forEach(item => {
-       if (item[key]) result.push(item[key]) 
-    }); 
-    return result
-}
-
-const result = pickPropArray(students, 'name')
-console.log(result)
-
-// 2 ЗАДАНИЕ
-function createCounter() {
-    let count = 1 
-    return function () {
-        console.log(count++)
+class Pizza {
+    constructor(name, price, calories) {
+        this.name = name;
+        this.basePrice = price;
+        this.baseCalories = calories;
+        this.size = null;
+        this.toppings = new Set();
     }
-}
 
-const counter1 = createCounter()
-counter1()
-counter1()
-
-const counter2 = createCounter()
-counter2()
-counter2()
-
-// 3 ЗАДАНИЕ
-function spinWords(str){
-    const words = str.split(" ")
-    let newStr = []
-    for (const item of words){
-        if (item.length >= 5) {
-            newStr.push([...item].reverse().join(""))
-        } else newStr.push(item)
+    setSize(size) {
+        this.size = size;
     }
-    return newStr.join(" ")
-}
 
-const result1 = spinWords( "Привет от Legacy" )
-console.log(result1)
+    addTopping(topping) {
+        this.toppings.add(topping);
+    }
 
-const result2 = spinWords( "This is a test" )
-console.log(result2)
+    removeTopping(topping) {
+        this.toppings.delete(topping);
+    }
 
-// 4 ЗАДАНИЕ
-const nums = [2,7,11,15]
-const target = 9
+    getToppings() {
+        return Array.from(this.toppings);
+    }
 
-function func(nums, target){
-    for (let i=0; i < nums.length; i++){
-        for (let j=i+1; j < nums.length; j++){
-            if (nums[i] + nums[j] == target) return [i,j]
+    getSize() {
+        return this.size;
+    }
+
+    calculatePrice() {
+        let price = this.basePrice;
+        if (this.size === "Большая") {
+            price += 200;
+        } 
+        else if (this.size === "Маленькая") {
+            price += 100;
         }
+
+        this.toppings.forEach(topping => {
+            if (topping === "Сливочная моцарелла") {
+                price += 50;
+            } 
+            else if (topping === "Сырный борт") {
+                price += (this.size === "Маленькая") ? 150 : 300;
+            } 
+            else if (topping === "Чедер и пармезан") {
+                price += (this.size === "Маленькая") ? 150 : 300;
+            }
+        });
+
+        return price;
+    }
+
+    calculateCalories() {
+        let calories = this.baseCalories;
+        if (this.size === "Большая") {
+            calories += 200;
+        } 
+        else if (this.size === "Маленькая") {
+            calories += 100;
+        }
+
+        this.toppings.forEach(topping => {
+            if (topping === "Сливочная моцарелла" || topping === "Сырный борт" || topping === "Чедер и пармезан") {
+                calories += 50;
+            }
+        });
+
+        return calories;
     }
 }
 
-const result3 = func(nums, target)
-console.log(result3);
+let pizza = new Pizza("Маргарита", 500, 300);
+pizza.setSize("Большая");
+pizza.addTopping("Сырный борт");
 
-// 5 ЗАДАНИЕ
-const strs = ["цветок","поток","хлопок"]
-
-function searchPrefix(strs){
-    let prefix = strs[0]
-    for (let i=1; i < strs.length; i++){
-        // while (strs[i].indexOf(prefix) != 0){}
-            // console.log(strs[i]);
-    }
-}
-
-const result4 = searchPrefix(strs)
-console.log(result4);
+console.log(`Вид пиццы: ${pizza.name}`);
+console.log(`Размер: ${pizza.getSize()}`);
+console.log(`Цена: ${pizza.calculatePrice()}`);
+console.log(`Калорийность: ${pizza.calculateCalories()}`);
