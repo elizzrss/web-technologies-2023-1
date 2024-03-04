@@ -3,10 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
 <body>
+    <main>
+        <div class="block">
+            <div class="pizza">
+                <div class="pizza-card pizza-selected">
+                    <img src="img/pizzaPep.jpg" alt="Пепперони" class="imgPazza">
+                    <h3>Пепперони</h3>
+                    <p>800 рублей</p>
+                </div>
+                <div class="pizza-card">
+                    <img src="img/pizzaMarg.jpg" alt="Маргарита" class="imgPazza">
+                    <h3>Маргарита</h3>
+                    <p>500 рублей</p>
+                </div>
+                <div class="pizza-card">
+                    <img src="img/pizzaBavar.jpg" alt="Баварская" class="imgBavar">
+                    <h3>Баварская</h3>
+                    <p>700 рублей</p>
+                </div>
+            </div>
     
+            <div class="pizza-param">
+                <h2>Выберете размер</h2>
+                <div class="param-size">
+                    <div class="size size-selected">Маленькая</div>
+                    <div class="size">Большая</div>
+                </div>
+    
+                <h2>Добавить по вкусу</h2>
+                <div class="pizza-param-toppings">
+                    <div class="topping">
+                        <img src="img/chbor.png" alt="Сырный бортик">
+                        <p>Сырный бортик</p>
+                        <h4>150P</h4>
+                        <button class="pizza-param-toppings-button toppings-selected"> + </button>
+                    </div>
+                    <div class="topping">
+                        <img src="img/slivmo.png" alt="Сливочная моцарелла">
+                        <p>Сливочная моцарелла</p>
+                        <h4>50P</h4>
+                        <button class="pizza-param-toppings-button"> + </button>
+                    </div>
+                    <div class="topping">
+                        <img src="img/chedparm.jpg" alt="Чеддер и пармезан">
+                        <p>Чеддер и пармезан</p>
+                        <h4>150P</h4>
+                        <button class="pizza-param-toppings-button"> + </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza-button">
+                Добавить в корзину за <span class="cal">0 ₽ (0 кКал)</span>
+            </div>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 </html>
