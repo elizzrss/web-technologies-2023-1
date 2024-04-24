@@ -59,6 +59,40 @@ echo transliterate($string);
 
 //---------------------------------ЧЕТВЕРТОЕ-------------------------------------------------
 echo("<h4>Задание 4</h4>");
+$menu =  array(
+    array(
+        'title' => 'Главное',
+        'link' => 'menu1',
+        'submenu' => array(
+            array(
+                'title' => 'Контакты',
+                'link' => 'sub-menu1',
+				'submenu' => array(
+                    array(
+                        'title' => 'Наши Соц. сети',
+                        'link' => 'sub-menu2',
+                    ),
+                ),
+            ),
+        ),
+    ),
+);
+
+function createMenu($menu) {
+    echo '<ul>';
+    $count = count($menu);
+    for ($i = 0; $i < $count; $i++) {
+        $value = $menu[$i];
+        echo '<li>';
+        echo "<a href='{$value['link']}'> {$value['title']} </a>";
+        if (isset($value['submenu'])) {
+            createMenu($value['submenu']);
+        }
+        echo '</li>';
+    }
+    echo '</ul>';
+}
+createMenu($menu);
 
 //---------------------------------ШЕСТОЕ-------------------------------------------------
 echo("<h4>Задание 6</h4>");
