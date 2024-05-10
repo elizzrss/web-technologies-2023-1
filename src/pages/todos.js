@@ -7,21 +7,13 @@ import Form from "../components/form.js";
 const init = async () => {
   const { ok: isLogged } = await Auth.me();
 
-  if (!isLogged) {
-    return location.login();
-  } else {
-    loading.stop();
-  }
+  if (!isLogged) return location.login();
+
+  loading.stop();
 
   const formEl = document.getElementById("todo-form");
-  new Form(
-    formEl,
-    {
-      description: () => false,
-    },
-    (values) => {
-      addTodo(values.description);
-    }
+  new Form(formEl, { description: () => false }, (values) =>
+    addTodo(values.description)
   );
 
   // create POST /todo { description: string }
@@ -39,29 +31,31 @@ const init = async () => {
     todoCheckbox.setAttribute("type", "checkbox");
     todoCheckbox.classList.add("todo__checkbox");
     todoCheckbox.checked = todo.completed;
+
     todoCheckbox.onchange = async function (event) {
       loading.start();
       const checkboxValue = event.target.checked;
       event.target.checked = !event.target.checked;
       const response = await Todos.updateStatusById(todo.id, checkboxValue);
       loading.stop();
-      if (response) {
-        event.target.checked = !event.target.checked;
-      } else {
-        alert("Ошибка при отправке запроса на сервер.");
-      }
+      if (!response) alert("Ошибка при отправке запроса на сервер.");
+      event.target.checked = !event.target.checked;
     };
+
     todoDescription.classList.add("todo__description");
     todoDescription.innerText = todo.description;
     todoRemoveButton.classList.add("todo__remove");
     todoRemoveButton.innerText = "Удалить";
+
     todoRemoveButton.onclick = async function (event) {
+      event.preventDefault();
       const response = confirm("Вы уверены?");
-      if (response) {
-        loading.start();
-        await Todos.deleteById(todo.id);
-        await createTodoList();
-      }
+      if (!response) return;
+
+      loading.start();
+      await Todos.deleteById(todo.id);
+      await createTodoList();
+      loading.stop();
     };
 
     todoHTML.appendChild(todoCheckbox);
@@ -71,27 +65,28 @@ const init = async () => {
     return todoHTML;
   }
   const createTodoList = async () => {
+    loading.start();
     const todos = await Todos.getAll();
-    document.querySelector(".todo-list").innerHTML = "";
     loading.stop();
-    todos.forEach((todo) => {
-      const todoHTML = createTodo(todo);
-      document.querySelector(".todo-list").appendChild(todoHTML);
-    });
+
+    if (!todos) return;
+
+    document.querySelector(".todo-list").innerHTML = "";
+    todos.forEach(insertInTodoList);
+  };
+
+  const insertInTodoList = (todo) => {
+    const todoHTML = createTodo(todo);
+    document.querySelector(".todo-list").appendChild(todoHTML);
   };
 
   const addTodo = async (description) => {
     loading.start();
-    const response = await Todos.create(description);
-    // debugger
-    if (response.ok) {
-      const todoHTML = createTodo(response.data);
-      document.querySelector(".todo-list").appendChild(todoHTML);
-      //   await createTodoList();
-    } else {
-      loading.stop();
-      console.log("Ошибка добавления Todo");
-    }
+    const todo = await Todos.create(description);
+    loading.stop();
+    if (!todo) return;
+
+    insertInTodoList(todo);
   };
 
   await createTodoList();

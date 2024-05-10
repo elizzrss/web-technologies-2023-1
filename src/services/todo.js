@@ -3,14 +3,13 @@ import api from "./api.js";
 export default class Todos {
   static async create(description) {
     try {
-      const response = await api("/todo", {
+      const { data } = await api("/todosss", {
         method: "POST",
         body: JSON.stringify({ description: description }),
       });
-      return response;
+      return data;
     } catch (e) {
       console.log(e);
-      return null;
     }
   }
 
