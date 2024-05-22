@@ -1,78 +1,86 @@
 class Pizza {
-    constructor(name, price, calories) {
-        this.name = name;
-        this.basePrice = price;
-        this.baseCalories = calories;
-        this.size = null;
-        this.toppings = new Set();
-    }
+	static sizes = {
+		Большая: { price: 200, calories: 200 },
+		Маленькая: { price: 100, calories: 100 },
+	};
 
-    setSize(size) {
-        this.size = size;
-    }
+	static toppings = {
+		'Сливочная моцарелла': { price: 50, calories: 50 },
+		'Сырный борт': {
+			price: { Большая: 300, Маленькая: 150 },
+			calories: 50,
+		},
+		'Чедер и пармезан': {
+			price: { Большая: 300, Маленькая: 150 },
+			calories: 50,
+		},
+	};
+	constructor(name, price, calories) {
+		this.name = name;
+		this.basePrice = price;
+		this.baseCalories = calories;
+		this.size = null;
+		this.toppings = new Set();
+	}
 
-    addTopping(topping) {
-        this.toppings.add(topping);
-    }
+	setSize(size) {
+		this.size = size;
+	}
 
-    removeTopping(topping) {
-        this.toppings.delete(topping);
-    }
+	addTopping(topping) {
+		this.toppings.add(topping);
+	}
 
-    getToppings() {
-        return Array.from(this.toppings);
-    }
+	removeTopping(topping) {
+		this.toppings.delete(topping);
+	}
 
-    getSize() {
-        return this.size;
-    }
+	getToppings() {
+		return Array.from(this.toppings);
+	}
 
-    calculatePrice() {
-        let price = this.basePrice;
-        if (this.size === "Большая") {
-            price += 200;
-        } 
-        else if (this.size === "Маленькая") {
-            price += 100;
-        }
+	getSize() {
+		return this.size;
+	}
 
-        this.toppings.forEach(topping => {
-            if (topping === "Сливочная моцарелла") {
-                price += 50;
-            } 
-            else if (topping === "Сырный борт") {
-                price += (this.size === "Маленькая") ? 150 : 300;
-            } 
-            else if (topping === "Чедер и пармезан") {
-                price += (this.size === "Маленькая") ? 150 : 300;
-            }
-        });
+	calculatePrice() {
+		let price = this.basePrice;
+		if (this.size && Pizza.sizes[this.size]) {
+			price += Pizza.sizes[this.size].price;
+		}
 
-        return price;
-    }
+		this.toppings.forEach((topping) => {
+			if (Pizza.toppings[topping]) {
+				if (typeof Pizza.toppings[topping].price === 'object') {
+					price += Pizza.toppings[topping].price[this.size];
+				} else {
+					price += Pizza.toppings[topping].price;
+				}
+			}
+		});
 
-    calculateCalories() {
-        let calories = this.baseCalories;
-        if (this.size === "Большая") {
-            calories += 200;
-        } 
-        else if (this.size === "Маленькая") {
-            calories += 100;
-        }
+		return price;
+	}
 
-        this.toppings.forEach(topping => {
-            if (topping === "Сливочная моцарелла" || topping === "Сырный борт" || topping === "Чедер и пармезан") {
-                calories += 50;
-            }
-        });
+	calculateCalories() {
+		let calories = this.baseCalories;
+		if (this.size && Pizza.sizes[this.size]) {
+			calories += Pizza.sizes[this.size].calories;
+		}
 
-        return calories;
-    }
+		this.toppings.forEach((topping) => {
+			if (Pizza.toppings[topping]) {
+				calories += Pizza.toppings[topping].calories;
+			}
+		});
+
+		return calories;
+	}
 }
 
-let pizza = new Pizza("Маргарита", 500, 300);
-pizza.setSize("Большая");
-pizza.addTopping("Сырный борт");
+let pizza = new Pizza('Маргарита', 500, 300);
+pizza.setSize('Большая');
+pizza.addTopping('Сырный борт');
 
 console.log(`Вид пиццы: ${pizza.name}`);
 console.log(`Размер: ${pizza.getSize()}`);
